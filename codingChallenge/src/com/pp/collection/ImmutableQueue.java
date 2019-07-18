@@ -53,14 +53,6 @@ public class ImmutableQueue<T> implements Queue<T> {
     }
 
     /**
-     * Assign reverse of forward to reverse to get first element in queue
-     */
-    private void forwardToReverse() {
-        this.reverse = this.forward.reverseStack();
-        this.forward = new Stack<T>();
-    }
-
-    /**
      * Remove the first element in the queue
      *
      * @return Queue
@@ -124,6 +116,14 @@ public class ImmutableQueue<T> implements Queue<T> {
     @Override
     public boolean isEmpty() {
         return this.forward.size + this.reverse.size == 0;
+    }
+
+    /**
+     * Assign reverse of forward to reverse
+     */
+    private void forwardToReverse() {
+        this.reverse = this.forward.reverseStack();
+        this.forward = new Stack<T>();
     }
 
     private static class Stack<T> {

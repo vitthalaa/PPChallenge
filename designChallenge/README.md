@@ -14,5 +14,5 @@ This system have three main functional aspects.
 <!-- TODO: Add description -->
 
 
-##### Technical stack
+#### Technical stack
 ![image link](images/analytic_system_design.svg)
