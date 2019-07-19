@@ -88,26 +88,6 @@ public class ImmutableQueue<T> implements Queue<T> {
         return this.reverse.head;
     }
 
-    ;
-
-    /**
-     * Return the last element in the queue
-     *
-     * @return T last element
-     */
-    @Override
-    public T tail() {
-        if (this.isEmpty()) {
-            throw new NoSuchElementException();
-        }
-
-        if (this.forward.isEmpty()) {
-            return this.reverse.reverseStack().head;
-        }
-
-        return this.forward.head;
-    }
-
     /**
      * Get queue size (equal to length of forward + reverse stack)
      *

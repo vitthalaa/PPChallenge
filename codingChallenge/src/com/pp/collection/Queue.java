@@ -1,9 +1,8 @@
 package com.pp.collection;
 
 public interface Queue<T> {
-    public Queue<T> enQueue(T t);
-    public Queue<T> deQueue();
-    public T head();
-    public boolean isEmpty();
-    public T tail();
+    Queue<T> enQueue(T t);
+    Queue<T> deQueue();
+    T head();
+    boolean isEmpty();
 }
